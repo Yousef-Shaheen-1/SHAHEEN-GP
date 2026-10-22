@@ -1,0 +1,217 @@
+# Contributing to SHAHEEN GROUP
+
+Thank you for your interest in contributing to SHAHEEN GROUP. This project is built for ambitious digital product work, strong engineering standards, and high-quality documentation and community collaboration.
+
+We welcome contributions in the form of code, design feedback, documentation improvements, accessibility work, bug reports, and deployment guidance.
+
+## 1. Ways to Contribute
+
+You can contribute by:
+
+- Reporting bugs and reproducible issues
+- Improving documentation and onboarding clarity
+- Suggesting product or UX enhancements
+- Improving accessibility or responsive behavior
+- Fixing bugs and keeping the app stable
+- Reviewing pull requests and providing technical feedback
+- Improving security, configuration, and deployment guidance
+
+## 2. Reporting Bugs
+
+Before filing a bug report:
+
+1. Check whether the issue already exists.
+2. Reproduce it on the current branch.
+3. Include the relevant environment details.
+4. Share the steps to reproduce, expected behavior, and actual behavior.
+5. Include screenshots, logs, or terminal output if useful.
+
+Use the repository's GitHub Issues tracker for bug reports. Do not disclose sensitive or exploited vulnerabilities in public issues.
+
+## 3. Proposing Enhancements
+
+For new features or substantial changes:
+
+- Open a clear issue describing the problem and desired outcome.
+- Explain the user need or technical reason behind the proposal.
+- Describe constraints, edge cases, or compatibility considerations.
+- Mention whether the change affects the website, CMS, backend API, or docs.
+
+## 4. Technical Questions
+
+If you need help understanding the project architecture or local setup:
+
+- Review the existing documentation first.
+- Search the repository for related files and scripts.
+- Open a GitHub discussion or issue with a specific question.
+
+Keep the question focused and include the exact command, error, or behavior you are observing.
+
+## 5. Prerequisites
+
+The project is a TypeScript + React + Express app.
+
+Required tools:
+
+- Node.js 20.x or 22.x
+- npm 10.x or later
+- Git 2.38+
+- A local environment support tool or terminal such as bash, zsh, or PowerShell
+
+## 6. Local Development Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Yousef-Shaheen-1/SHAHEEN-GP.git
+   cd SHAHEEN-GP
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm ci
+   ```
+
+3. Copy the example environment file if you need local configuration:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the app in the browser at the configured local address, typically `http://localhost:3000`.
+
+## 7. Repository Scripts
+
+The repository currently defines these scripts in `package.json`:
+
+```bash
+npm run dev
+npm run start
+npm run build
+npm run preview
+npm run clean
+npm run lint
+npm test
+```
+
+Verification commands are based on the repository's actual scripts and should be used as the authoritative source.
+
+## 8. Branching and Workflow
+
+Recommended conventions:
+
+- `feature/<short-description>` for new features
+- `fix/<short-description>` for bug fixes
+- `docs/<short-description>` for documentation changes
+- `chore/<short-description>` for maintenance or infrastructure updates
+
+Keep pull requests focused and avoid mixing unrelated changes into a single branch.
+
+## 9. Commit Message Guidance
+
+A simple, clear convention is recommended:
+
+- `feat: add ...`
+- `fix: resolve ...`
+- `docs: update ...`
+- `chore: maintain ...`
+
+Keep commit messages descriptive and specific.
+
+## 10. Coding Standards
+
+- Prefer small, readable, well-scoped changes.
+- Preserve the project's current architecture and behavior unless the task explicitly requires otherwise.
+- Favor clear naming and maintainable TypeScript patterns.
+- Avoid introducing secrets, credentials, or private data into the codebase.
+- Keep accessibility and multilingual behavior in mind when editing UI components.
+- Do not silently remove a valid feature or undocumented behavior.
+
+## 11. Documentation Standards
+
+When changing behavior or configuration:
+
+- Update the relevant documentation in the same change.
+- Keep examples accurate and copy-pastable.
+- Document environment variables in a safe, generic way.
+- Do not claim that a feature exists without verifying it in code or configuration.
+
+## 12. Accessibility Expectations
+
+This project includes bilingual English/Arabic user experience patterns and a cinematic front-end experience. Please:
+
+- Keep contrast readable for the dark theme.
+- Preserve keyboard focus visibility.
+- Maintain semantic HTML and meaningful labels.
+- Validate responsive behavior for mobile and desktop layouts.
+- Avoid introducing motion that is inaccessible or overly intrusive.
+
+## 13. Testing and Validation
+
+Before opening a pull request, validate based on the project scripts available in `package.json`:
+
+```bash
+npm run lint
+npm run build
+```
+
+If you add behavioral changes, also consider adding or updating relevant tests if the repository supports them. The current project configuration does not define additional test tooling beyond the TypeScript check, so the safest validation is to run the repo's declared scripts.
+
+## 14. Pull Request Preparation
+
+Before submitting a pull request:
+
+- Keep the change focused.
+- Explain the reason for the update in the PR description.
+- Mention any breaking changes or environment requirements.
+- Include screenshots or examples when UI changes are involved.
+- Ensure the code and docs remain consistent with the project's branding and tone.
+
+## 15. Pull Request Checklist
+
+- [ ] I have read the project documentation and relevant files.
+- [ ] My change is focused and not unrelated to the stated issue.
+- [ ] I have validated the project scripts relevant to my change.
+- [ ] I have updated documentation when behavior changed.
+- [ ] I have not committed secrets or private credentials.
+- [ ] I have preserved the project's existing functionality and branding where practical.
+
+## 16. Review and Approval Process
+
+All pull requests are reviewed by the maintainers. Review is based on correctness, clarity, maintainability, safety, and compatibility with the project's goals. Not every contribution is accepted automatically, and maintainers may request revisions before merging.
+
+## 17. Breaking Changes
+
+If a contribution introduces a breaking change:
+
+- Call it out clearly in the pull request description.
+- Explain migration steps or compatibility impacts.
+- Update any relevant documentation and configuration examples.
+
+## 18. Security Vulnerability Reporting
+
+Do not open a public issue for a security vulnerability. Follow the security disclosure guidance in [SECURITY.md](./SECURITY.md).
+
+## 19. Code of Conduct
+
+This project follows the community standards described in [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md). Please read and uphold them when participating in the project.
+
+## 20. Licensing and Third-Party Components
+
+This project is distributed under the BSD 3-Clause License. See [LICENSE](./LICENSE) for the complete legal text. Third-party libraries remain subject to their own licenses and terms.
+
+## 21. Contact and Support
+
+For project questions, conversation, or support:
+
+- GitHub Issues: use the repository issue tracker.
+- Contact email: `shaheen.group000@gmail.com`
+- Direct maintainer email: `yousef@shaheen-group.com`
+
