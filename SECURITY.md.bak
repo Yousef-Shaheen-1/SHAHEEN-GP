@@ -1,0 +1,90 @@
+# Security Policy — SHAHEEN GROUP
+
+## 1. Supported Versions
+
+The project currently declares version `2.0.0` in `package.json`, and the repository's operational guidance treats the `2.x` track as the active supported line.
+
+| Version | Supported | Notes |
+| :--- | :--- | :--- |
+| `2.x.x` | Yes | Active production and documentation track |
+| `1.x.x` | Critical fixes only | Legacy support only when still deployed |
+| `< 1.0` | No | Experimental or pre-release work |
+
+This policy is intended to match the repository's current documentation and versioning practices.
+
+## 2. Reporting a Vulnerability
+
+If you discover a security vulnerability, sensitive information leak, or abuse in the SHAHEEN GROUP repository or its hosted services:
+
+1. Do not create a public GitHub issue for the vulnerability before mitigation.
+2. Use a private reporting channel.
+3. Send a detailed report to one of the verified maintainer addresses:
+   - `shaheen.group000@gmail.com`
+   - `yousef@shaheen-group.com`
+4. Include:
+   - A clear description of the issue
+   - Affected component, endpoint, or route
+   - Reproduction steps or proof of concept
+   - Impact and severity assessment
+   - Suggested remediation when available
+
+## 3. What to Expect After a Report
+
+The maintainers aim to acknowledge valid reports promptly and triage them based on severity and risk. The repository's current documentation indicates the following approach:
+
+- Initial acknowledgment within 24 hours
+- Triage and assessment within 48 hours
+- Remediation planning for critical issues within 5 business days when feasible
+
+Response times may vary depending on the scope and urgency of the issue.
+
+## 4. Responsible Disclosure Expectations
+
+Please:
+
+- Keep the report confidential until a fix is ready.
+- Avoid exposing exploitable details publicly.
+- Do not test against live production systems beyond a safe reproduction path.
+- Do not access, modify, or exfiltrate unrelated data.
+
+## 5. Secret Handling Standards
+
+The project enforces a zero-secret policy for sensitive values:
+
+- Never commit production API keys or credentials.
+- Never expose privileged configuration in frontend bundles.
+- Treat all client-side data as untrusted input.
+- Keep secret values in secure environment management systems or deployment secrets stores.
+
+The repository's `.env.example` file intentionally demonstrates a safe template rather than real secrets.
+
+## 6. Dependencies and Supply Chain
+
+This project uses a number of upstream dependencies and service integrations, including:
+
+- Vite and React
+- Express and TypeScript
+- Google GenAI / Gemini access for server-side generation
+- Capacitor for Android packaging
+
+Dependencies should be kept updated when appropriate and any upstream security advisories should be reviewed promptly.
+
+## 7. Security Scope
+
+This policy covers:
+
+- Source code in this repository
+- Server-side logic and API routes
+- Configuration and deployment details managed by the project
+- Any local or hosted environment explicitly operated by the project maintainers
+
+This policy does not cover unrelated third-party services, accounts, or domains outside the direct project scope.
+
+## 8. Disclosure Limitations
+
+While the project encourages responsible disclosure, it is not appropriate to publish discovered, exploitable vulnerabilities before a fix is available. If a report is escalated, we expect coordinated disclosure with the maintainers.
+
+## 9. Contact and Maintainer Notice
+
+This project does not currently advertise a dedicated private vulnerability reporting portal in the repo metadata, so the verified operational path is the private email reporting process documented above. If the project later adds a GitHub Security Advisory or another private reporting endpoint, that mechanism should be used in place of email reporting when available.
+
