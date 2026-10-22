@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           aria-label="Shaheen Group Home"
         >
           <img
-            src="/assets/brand/shaheen-icon-transparent.png"
+            src={import.meta.env.BASE_URL + 'assets/brand/shaheen-icon-transparent.png'}
             alt="SHAHEEN GROUP Emblem"
             className="w-10 h-10 object-contain drop-shadow-[0_0_12px_rgba(224,162,27,0.35)] transition-transform duration-300 group-hover:scale-105"
             referrerPolicy="no-referrer"

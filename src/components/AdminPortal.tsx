@@ -93,7 +93,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({ lang, onExit }) => {
   const [projectSummaryAr, setProjectSummaryAr] = useState('');
   const [projectClient, setProjectClient] = useState('');
   const [projectYear, setProjectYear] = useState('2026');
-  const [projectImage, setProjectImage] = useState('/assets/projects/project-autonomous.jpg');
+  const [projectImage, setProjectImage] = useState(import.meta.env.BASE_URL + 'assets/projects/project-autonomous.jpg');
 
   // Tool Form
   const [toolName, setToolName] = useState('');

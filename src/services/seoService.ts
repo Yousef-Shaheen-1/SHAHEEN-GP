@@ -249,14 +249,23 @@ export function getCanonicalUrl(view: NavView = 'home', projectSlug?: string): s
 /**
  * Resolves an asset URL (image, logo, icon) to an absolute URL
  */
-export function resolveAssetUrl(assetPath?: string, fallback = '/assets/brand/shaheen-icon.png'): string {
+export function resolveAssetUrl(assetPath?: string, fallback = import.meta.env.BASE_URL + 'assets/brand/shaheen-icon.png'): string {
   const target = assetPath || fallback;
-  if (target.startsWith('http://') || target.startsWith('https://')) {
+  if (/^https?:\/\//i.test(target)) {
     return target;
   }
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://shaheen-group.com';
-  const cleanPath = target.startsWith('/') ? target : `/${target}`;
-  return `${origin}${cleanPath}`;
+
+  const origin = typeof window !== 'undefined'
+    ? window.location.origin
+    : 'https://shaheen-group.com';
+
+  const base = import.meta.env.BASE_URL || '/';
+  const relativePath = target.startsWith(base)
+    ? target.slice(base.length)
+    : target.replace(/^\/+/, '');
+  const cleanPath = relativePath.replace(/^\/+/, '');
+
+  return new URL(base + cleanPath, origin).toString();
 }
 
 /**
@@ -305,7 +314,7 @@ export function generateProjectSeo(project: Project, lang: Language): SeoMetadat
       '@type': 'Organization',
       'name': 'SHAHEEN GROUP',
       'url': typeof window !== 'undefined' ? window.location.origin : 'https://shaheen-group.com',
-      'logo': resolveAssetUrl('/assets/brand/shaheen-icon.png'),
+      'logo': resolveAssetUrl('assets/brand/shaheen-icon.png'),
       'address': {
         '@type': 'PostalAddress',
         'addressLocality': 'Amman',
@@ -339,7 +348,7 @@ export function generateRouteSeo(route: NavView, lang: Language): SeoMetadata {
   const isAr = lang === 'ar';
   const config = ROUTE_SEO_CONFIGS[route] || ROUTE_SEO_CONFIGS.home;
   const canonicalUrl = getCanonicalUrl(route);
-  const imageUrl = resolveAssetUrl('/assets/brand/shaheen-icon.png');
+  const imageUrl = resolveAssetUrl('assets/brand/shaheen-icon.png');
   const title = config.title[lang];
   const description = config.description[lang];
   const keywords = config.keywords?.[lang] || 'SHAHEEN GROUP, Yousef Shaheen, Amman, Jordan, Software Architecture';

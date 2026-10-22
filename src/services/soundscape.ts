@@ -57,7 +57,7 @@ class SoundscapeEngine {
     if (this.audioElement || typeof window === 'undefined') return;
 
     try {
-      this.audioElement = new Audio('/assets/audio/shaheen-ambient.mp3');
+      this.audioElement = new Audio(import.meta.env.BASE_URL + 'assets/audio/shaheen-ambient.mp3');
       this.audioElement.loop = true;
       this.audioElement.volume = this.isMuted ? 0 : this.volume;
 

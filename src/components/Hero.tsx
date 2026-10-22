@@ -206,12 +206,12 @@ export const Hero: React.FC<HeroProps> = ({ lang, onNavigate }) => {
             {/* The Isolated Subject Layer with Gold Rim Drop Shadow */}
             <div className="relative group">
               <img
-                src="/assets/cinematic/shaheen-hero-subject.png"
+                src={import.meta.env.BASE_URL + 'assets/cinematic/shaheen-hero-subject.png'}
                 alt="Yousef A. Shaheen - Mastermind of SHAHEEN GROUP"
                 className="w-full h-auto object-contain max-h-[520px] sm:max-h-[640px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)] filter contrast-[1.05]"
                 onError={(e) => {
                   // Graceful fallback to original background if cutout ever fails
-                  (e.target as HTMLImageElement).src = '/assets/cinematic/shaheen-hero-background.png';
+                  (e.target as HTMLImageElement).src = import.meta.env.BASE_URL + 'assets/cinematic/shaheen-hero-background.png';
                 }}
                 referrerPolicy="no-referrer"
               />

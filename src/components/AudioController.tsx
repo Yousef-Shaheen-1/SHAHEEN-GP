@@ -8,7 +8,7 @@ interface AudioPreferences {
 }
 
 const STORAGE_KEY = 'shaheen_audio_controller_pref';
-const AUDIO_ASSET_PATH = '/assets/audio/shaheen-ambient.mp3';
+const AUDIO_ASSET_PATH = import.meta.env.BASE_URL + 'assets/audio/shaheen-ambient.mp3';
 
 export const AudioController: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);

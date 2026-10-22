@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Language } from '../types';
 import { soundscape } from '../services/soundscape';
-import { 
-  Smartphone, 
-  Download, 
-  ShieldCheck, 
-  QrCode, 
-  CheckCircle2, 
-  Copy, 
-  Check, 
-  ExternalLink, 
-  Zap, 
-  Cpu, 
-  Lock 
+import {
+  Smartphone,
+  Download,
+  ShieldCheck,
+  QrCode,
+  CheckCircle2,
+  Copy,
+  Check,
+  ExternalLink,
+  Zap,
+  Cpu,
+  Lock
 } from 'lucide-react';
 
 interface AndroidDownloadSectionProps {
@@ -36,7 +36,7 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
   const handleDownload = () => {
     soundscape.playClickTone();
     setDownloadInitiated(true);
-    
+
     // Trigger download of the APK through the API route
     const link = document.createElement('a');
     link.href = '/api/apk/download';
@@ -54,7 +54,7 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#e0a21b]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e0a21b]/10 border border-[#e0a21b]/30 text-xs font-mono text-[#e0a21b]">
@@ -62,8 +62,8 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
             <span>{isArabic ? 'تطبيق الأندرويد السيادي' : 'NATIVE ANDROID APK RELEASE'}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight text-balance">
-            {isArabic 
-              ? 'قيادة المنظومة الرقمية من راحة يدك' 
+            {isArabic
+              ? 'قيادة المنظومة الرقمية من راحة يدك'
               : 'Command The Digital Syndicate From Any Android Device'}
           </h2>
           <p className="text-base sm:text-lg text-slate-400 font-light leading-relaxed">
@@ -75,11 +75,11 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
 
         {/* 2-Column Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Download Card & Technical Specs */}
           <div className="lg:col-span-7 space-y-8">
             <div className="p-8 sm:p-10 rounded-3xl bg-[#12151c] border border-white/[0.1] shadow-[0_20px_50px_rgba(0,0,0,0.6)] space-y-8 relative overflow-hidden">
-              
+
               {/* Gold Top Light Accent */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#e0a21b] to-transparent" />
 
@@ -87,9 +87,9 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
               <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#e0a21b]/20 to-[#181b24] p-2.5 border border-[#e0a21b]/40 flex items-center justify-center shadow-[0_0_20px_rgba(224,162,27,0.25)]">
-                    <img 
-                      src="/assets/brand/shaheen-icon-transparent.png" 
-                      alt="SHAHEEN App" 
+                    <img
+                      src={import.meta.env.BASE_URL + 'assets/brand/shaheen-icon-transparent.png'}
+                      alt="SHAHEEN App"
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -125,7 +125,7 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
                 </button>
 
                 <p className="text-[11px] text-center text-slate-500">
-                  {isArabic 
+                  {isArabic
                     ? 'متوافق مع أجهزة أندرويد 8.0 فأحدث. لا يتطلب متجر جوجل بلاي.'
                     : 'Compatible with Android 8.0 (API 26) through Android 14. Zero Google Play dependency.'}
                 </p>
@@ -229,9 +229,9 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
                 {/* App Content Preview */}
                 <div className="flex-1 p-4 flex flex-col items-center justify-center text-center space-y-4">
                   <div className="w-16 h-16 rounded-2xl bg-[#181b24] p-3 border border-[#e0a21b]/40 shadow-[0_0_20px_rgba(224,162,27,0.3)]">
-                    <img 
-                      src="/assets/brand/shaheen-icon-transparent.png" 
-                      alt="Crest" 
+                    <img
+                      src={import.meta.env.BASE_URL + 'assets/brand/shaheen-icon-transparent.png'}
+                      alt="Crest"
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -295,7 +295,7 @@ export const AndroidDownloadSection: React.FC<AndroidDownloadSectionProps> = ({ 
                   <span>{isArabic ? 'مسح رمز الاستجابة السريعة' : 'Instant Sideload Scan'}</span>
                 </span>
                 <p className="text-[11px] text-slate-400 leading-snug">
-                  {isArabic 
+                  {isArabic
                     ? 'امسح الرمز بكاميرا هاتفك لبدء تحميل ملف APK مباشرة.'
                     : 'Scan with your Android camera to download and install instantly.'}
                 </p>

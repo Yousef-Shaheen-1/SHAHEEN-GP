@@ -178,7 +178,7 @@ export const CinematicIntro: React.FC<CinematicIntroProps> = ({ onComplete, lang
         {/* Crest with Gold Shimmer */}
         <div ref={logoRef} className="relative w-28 h-28 mb-8 p-3 rounded-2xl bg-gradient-to-b from-[#e0a21b]/20 via-[#13161c] to-[#0a0d12] border border-[#e0a21b]/40 shadow-[0_0_50px_rgba(224,162,27,0.25)] overflow-hidden">
           <img
-            src="/assets/brand/shaheen-icon-transparent.png"
+            src={import.meta.env.BASE_URL + 'assets/brand/shaheen-icon-transparent.png'}
             alt="SHAHEEN GROUP Crest"
             className="w-full h-full object-contain relative z-10 drop-shadow-[0_4px_12px_rgba(224,162,27,0.4)]"
           />

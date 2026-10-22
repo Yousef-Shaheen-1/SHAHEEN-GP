@@ -47,7 +47,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="md:col-span-5 space-y-4 text-left rtl:text-right">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/brand/shaheen-icon-transparent.png"
+                src={import.meta.env.BASE_URL + 'assets/brand/shaheen-icon-transparent.png'}
                 alt="SHAHEEN GROUP Emblem"
                 className="w-8 h-8 object-contain"
                 referrerPolicy="no-referrer"

@@ -30,7 +30,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             <div className="relative p-10 rounded-3xl bg-[#12151c] border border-white/[0.08] shadow-2xl flex flex-col items-center text-center space-y-6 w-full max-w-md">
               <div className="relative w-28 h-28 flex items-center justify-center p-2 rounded-2xl bg-[#181b24] border border-[#e0a21b]/30 shadow-[0_0_30px_rgba(224,162,27,0.2)]">
                 <img
-                  src="/assets/brand/shaheen-icon-transparent.png"
+                  src={import.meta.env.BASE_URL + 'assets/brand/shaheen-icon-transparent.png'}
                   alt="SHAHEEN GROUP Emblem"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
